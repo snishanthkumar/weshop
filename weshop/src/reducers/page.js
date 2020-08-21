@@ -1,4 +1,3 @@
-/* eslint-disable no-redeclare */
 import * as types from '../constants/PageActionTypes';
 
 const initialPageState = {

@@ -16,11 +16,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import chair from '../assets/images/chair_2.jpg';
 import cup_1 from '../assets/images/cup_1.jpg';
 import cup_2 from '../assets/images/cup_2.jpg';
 import fridge_1 from '../assets/images/fridge_1.jpg';
-import fridge_2 from '../assets/images/fridge_2.jpg';
 import bed_1 from '../assets/images/bed_1.jpg';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -34,8 +32,7 @@ import '../styles/header.scss'
 
 const drawerWidth = 250;
 
-// const theme = useTheme();
-
+/** Custom styles */
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
@@ -104,20 +101,21 @@ class Header extends Component {
         // this.props.getData();
     }
 
-
+    /** Function to open side drawer (Menu) */
     handleDrawerOpen = () => {
         this.setState({ open: true });
     };
 
+    /** Function to close side drawer (Menu) */
     handleDrawerClose = () => {
         this.setState({ open: false });
 
     };
 
-    render() {
 
+    render() {
         const { classes } = this.props
-        console.log(this.props.page.data)
+
         return (
             <div className={classes.root}>
                 <CssBaseline />
@@ -161,7 +159,6 @@ class Header extends Component {
                         {['Collection', 'Color', 'Category', 'Price Range'].map((text, index) => (
 
                             <ListItem button key={text} className="sub_list">
-                                {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                                 <ListItemText primary={text} />
                                 <ListItemIcon>{text !== 'Price Range' ? <ExpandMoreIcon /> : null}</ListItemIcon>
                                 <Divider />
@@ -169,14 +166,6 @@ class Header extends Component {
                         ))}
                     </List>
                     <Divider />
-                    {/* <List>
-                        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                            <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
-                    </List> */}
                 </Drawer>
                 <main
                     className={clsx(classes.content, {
@@ -228,10 +217,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 
 }
-// export default connect(withStyles(useStyles)(mapStateToProps, mapDispatchToProps))(Header);
 
-// export default withStyles(useStyles, { withTheme: true })(Header);
-
-export default
-
-    withStyles(useStyles, { withTheme: true })(connect(mapStateToProps, mapDispatchToProps)(Header));
+export default withStyles(useStyles, { withTheme: true })(connect(mapStateToProps, mapDispatchToProps)(Header));
