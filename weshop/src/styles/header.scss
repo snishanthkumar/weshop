@@ -1,0 +1,39 @@
+.home {
+    position: relative;
+    top: 100px;
+    // left: 30px;
+    // right: 30px;
+    justify-content: center;
+    align-items: center;
+
+    .home_in {
+        text-align: center;
+    }
+
+    .text_desc {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    img {
+        cursor: pointer;
+        transition: linear .2s;
+
+        &:hover {
+            box-shadow: 2px 2px 6px 4px #00000042;
+            transition: linear .2s;
+        }
+    }
+
+}
+
+.main_list {
+    padding: 40px !important;
+
+    .sub_list {
+        padding: 20px !important;
+        border-bottom: 1px solid;
+    }
+}

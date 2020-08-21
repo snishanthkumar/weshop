@@ -1,0 +1,32 @@
+[
+    {
+        "name": "cup_1",
+        "category": "cup",
+        "id": 0
+    },
+    {
+        "name": "cup_2",
+        "category": "cup",
+        "id": 0
+    },
+    {
+        "name": "fridge_1",
+        "category": "fridge",
+        "id": 0
+    },
+    {
+        "name": "bed_1",
+        "category": "bed",
+        "id": 0
+    },
+    {
+        "name": "fridge_2",
+        "category": "fridge",
+        "id": 0
+    },
+    {
+        "name": "chair_2",
+        "category": "chair",
+        "id": 0
+    }
+]
